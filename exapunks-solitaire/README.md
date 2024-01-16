@@ -4,10 +4,7 @@
 
 Because the game displays cards in a pixel-perfect way, I didn’t need to do any fancy computer-vision. To determine what the cards were, I could just take a screenshot and compare pixels at a known location to reference images.
 
-<img src="src/1.png">
-<img src="src/2.png">
-<img src="src/3.png">
-<img src="src/4.png">
+<img src="src/1.png"> <img src="src/2.png"> <img src="src/3.png"> <img src="src/4.png">
 
 As for actually solving the game, the main challenge was representing the state of the game; from there it was enough to just do a straightforward graph search.
 
