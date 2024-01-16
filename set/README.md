@@ -1,9 +1,9 @@
 # Set
 
-[Set](https://en.wikipedia.org/wiki/Set_(card_game)) is a game I enjoy, but there's a somewhat high barrier to entry for new players:
+[Set](https://en.wikipedia.org/wiki/Set_(card_game)) is a game I enjoy, but there’s a somewhat high barrier to entry for new players:
 
-- It's awkward to explain
-- It's frustratingly difficult the first few times (and can turn people off from the game completely)
+- It’s awkward to explain
+- It’s frustratingly difficult the first few times (and can turn people off from the game completely)
 
 I made two related web apps to help with this:
 
