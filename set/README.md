@@ -14,14 +14,10 @@ I made two related web apps to help with this:
 
 https://robot-dreams.github.io/set-tutorial/
 
-Source: https://github.com/robot-dreams/set-tutorial
-
 <img src="tutorial.png?raw=true" alt="Tutorial" width="600px" />
 
 ## Game
 
 https://robot-dreams.github.io/set-game/
-
-Source: https://github.com/robot-dreams/set-game
 
 <img src="game.png?raw=true" alt="Game" width="600px" />
