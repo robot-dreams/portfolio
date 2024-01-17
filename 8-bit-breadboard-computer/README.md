@@ -12,7 +12,7 @@ I followed along and built one. It took me about a month, and through the proces
 
 ## Modifications / Optimizations
 
-I made a few modifications / optimizations, that turned out to be extremely helpful. Some were based on various YouTube comments and Reddit posts, others were from me:
+I made a few modifications / optimizations; most of them were inspired by helpful YouTube comments and Reddit posts:
 
 - Used LEDs with built-in resistors, which saved a lot of space
 - Upgraded from a generic power supply to a much more reliable Apple one
