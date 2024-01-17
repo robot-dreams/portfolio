@@ -2,9 +2,9 @@
 
 https://eater.net/8bit
 
-Ben Eater created an incredible series of videos where he built an 8-bit computer on breadboards; he takes “I built my own computer” to the next level.
+Ben Eater created an incredible series of videos and kits about building an 8-bit computer on breadboards; he takes “I built my own computer” to the next level.
 
-I followed along and built my own. It took me about a month, and through the process I learned a LOT about digital electronics. Though I have to admit, it feels like 95% of the effort was in trying to keep wires organized :)
+I followed along and built one. It took me about a month, and through the process I learned a LOT about digital electronics. Though I have to admit, it feels like 95% of the effort was in trying to keep wires organized :)
 
 ## Final Result
 
