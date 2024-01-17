@@ -6,8 +6,8 @@ After seeing the final result, the boyfriend of one of her cousins said “This 
 
 ## Notes
 
-- This was mostly a layout challenge; the hardest part was handling multiple spouses.
-- There's also a Python script that crops square images into circles (with a transparent background).
+- This was mostly a layout challenge; the hardest part was handling people who re-married.
+- There's also a Python script that crops square headshots into circles (with a transparent background).
 - This is a case study in how NOT to do reliable / maintainable / high-quality software engineering!
 
 ## Example
