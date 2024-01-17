@@ -2,7 +2,7 @@
 
 My significant other has rather a lot of cousins (over 20), and I wanted a nice way to make a family tree so I could see all of their names and faces at a glance.
 
-After seeing the final result, her cousin's boyfriend said “This should be included in the boyfriend onboarding!”
+After seeing the final result, the boyfriend of one of her cousins said “This should be included in the boyfriend onboarding!”
 
 ## Notes
 
