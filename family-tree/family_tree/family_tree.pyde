@@ -32,33 +32,31 @@ class Node:
         self.rsqueeze = rsqueeze
         self.duplicate = duplicate
 
-    def extent(self, child_only=False):
+    def extent(self):
         if self.spouse is None:
             return R, R
         else:
             children = self.spouse.children
+            l = R
+            r = self.spouse_dx() + R
             if len(children) == 0:
-                if self.duplicate:
-                    return R, R
-                else:
-                    return R, self.spouse_dx() + R
+                return l, r
             else:
-                wsum = (len(children) - 1) * CHILD_GAP_X
-                for child in children:
-                    wsum += sum(child.extent())
-                lc = (wsum - self.spouse_dx()) / 2
-                rc = (wsum + self.spouse_dx()) / 2
-                if child_only:
-                    return lc, rc
-                if self.lsqueeze:
-                    lc = min(R, lc)
-                else:
-                    lc = max(R, lc)
-                if self.rsqueeze:
-                    rc = min(self.spouse_dx() + R, rc)
-                else:
-                    rc = max(self.spouse_dx() + R, rc)
-                return lc, rc
+                lc, rc = self.children_extent()
+                l = min(l, lc) if self.lsqueeze else max(l, lc)
+                r = min(r, rc) if self.rsqueeze else max(r, rc)
+                return l, r
+
+    def children_extent(self):
+        assert self.spouse is not None
+        assert len(self.spouse.children) > 0
+        children = self.spouse.children
+        wsum = (len(children) - 1) * CHILD_GAP_X
+        for child in children:
+            wsum += sum(child.extent())
+        lc = (wsum - self.spouse_dx()) / 2
+        rc = (wsum + self.spouse_dx()) / 2
+        return lc, rc
 
     def spouse_dx(self):
         if self.duplicate:
@@ -70,7 +68,6 @@ class Node:
     def render(self):
         if not self.duplicate:
             node(0, R, self.name)
-        l, r = self.extent()
         if self.spouse is None:
             return
         spouse = self.spouse
@@ -86,7 +83,7 @@ class Node:
             children[0].render()
             popMatrix()
         elif len(children) > 1:
-            l, r = self.extent(child_only=True)
+            l, r = self.children_extent()
             l_oldest, _ = children[0].extent()
             _, r_youngest = children[-1].extent()
             line(-l + l_oldest + BORDER_RADIUS, CHILD_LINE_Y1, r - r_youngest - BORDER_RADIUS, CHILD_LINE_Y1)
@@ -94,6 +91,8 @@ class Node:
             translate(-l, CHILD_LINE_Y1 + CHILD_LINE_Y2)
             for i, child in enumerate(children):
                 l_child, r_child = child.extent()
+
+                # Horrible concentric arc thing
                 if child.duplicate:
                     i0 = [c.name for c in children].index(child.name)
                     centers = [(l_child, R)]
@@ -116,7 +115,7 @@ class Node:
                             partial_arc(x1, y1, rsrc, h + GAP, h)
                         child_line = k == 0 and len(child.spouse.children) > 0
                         connect(x1, y1, x2, y2, rsrc, rdst, h, child_line=child_line)
-                
+
                 translate(l_child, 0)
                 if i == 0:
                     line(0, -CHILD_LINE_Y2 + BORDER_RADIUS, 0, 0)
