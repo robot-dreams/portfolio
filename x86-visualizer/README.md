@@ -8,6 +8,6 @@ I use this visualizer as a teaching aid as I explain all the relevant concepts. 
 
 As a bonus, many students tell me that they come away with a much better understanding of recursion as well.
 
-## Screenshot
+## In Action
 
 <img src="x86-visualizer.gif" width="600px" />
