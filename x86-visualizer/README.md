@@ -10,4 +10,4 @@ As a bonus, many students tell me that they come away with a much better underst
 
 ## Screenshot
 
-<img src="x86-visualizer.png" width="600px" />
+<img src="x86-visualizer.gif" width="600px" />
